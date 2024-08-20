@@ -51,7 +51,7 @@ void vec_remove(vec_t *vec, unsigned int index)
         return;
     }
     for (int i = index; i < vec->elem_count; i++)
-        vec->arr[i] = vec->arr[i + 1];
+        memcpy(vec->arr + vec->elem_size * i, vec->arr + vec->elem_size * (i + 1), vec->elem_size);
     vec->elem_count--;
 }
 
