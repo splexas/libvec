@@ -15,6 +15,7 @@ vec_t *vec_init(int elem_size, int reserved_elements);
 int vec_push(vec_t *vec, void *val);
 void *vec_get(vec_t *vec, unsigned int index);
 void vec_remove(vec_t *vec, unsigned int index);
-void vec_free(vec_t **vec);
+int vec_find(vec_t *vec, void *val);
+void vec_free(vec_t *vec);
 
 #endif
